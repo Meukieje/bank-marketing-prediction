@@ -1,3 +1,7 @@
+
+python
+Copier
+Modifier
 import streamlit as st
 import pandas as pd
 import joblib
@@ -19,4 +23,4 @@ education = st.selectbox("Éducation", ["basic.4y", "basic.6y", "basic.9y", "hig
 if st.button("Prédire"):
     user_data = [[age, job, marital, education]]
     prediction = model.predict(user_data)
-    st.write("Résultat de la prédiction :
+    st.write("Résultat de la prédiction :", "Oui" if prediction[0] == 1 else "Non")
